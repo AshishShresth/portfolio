@@ -1,0 +1,33 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  color-scheme: light dark;
+  --clr-dark: 230 35% 7%;
+  --clr-light-accent: 231 77% 90%;
+  --clr-dark-accent: 231 90% 90%;
+  --clr-white: 0 0% 100%;
+  --primary-clr: light-dark(hsl(var(--clr-dark)), hsl(var(--clr-light-accent)));
+  --primary-bg: light-dark(hsl(var(--clr-white)), hsl(var(--clr-dark)));
+  --accent-clr: light-dark(
+    hsl(var(--clr-dark-accent)),
+    hsl(var(--clr-light-accent))
+  );
+
+  /* font-sizes */
+  --fs-900: clamp(5rem, 2.586rem + 7.543vw, 9.375rem);
+  --fs-800: clamp(3.5rem, 1.983rem + 4.741vw, 6.25rem);
+  --fs-700: clamp(1.5rem, 0.397rem + 3.448vw, 3.5rem);
+  --fs-600: clamp(1rem, 0.448rem + 1.724vw, 2rem);
+  --fs-500: clamp(1rem, 0.586rem + 1.293vw, 1.75rem);
+  --fs-400: clamp(0.938rem, 0.834rem + 0.323vw, 1.125rem);
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
