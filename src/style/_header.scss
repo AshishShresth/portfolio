@@ -139,6 +139,7 @@
     white-space: nowrap;
     cursor: pointer;
     width: 100%;
+    transition: background-color 250ms ease-in-out;
 
     &[for="system"]::before {
       content: "brightness_medium";
@@ -158,6 +159,7 @@
     }
   }
 
+  label:hover,
   input:checked + label {
     background-color: light-dark(
       hsl(var(--clr-dark) / 0.5),
