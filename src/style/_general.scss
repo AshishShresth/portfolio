@@ -96,6 +96,20 @@
   transform: translateY(0);
 }
 
+/* colors */
+
+.primary-bg {
+  background-color: var(--primary-bg);
+}
+
+.primary-clr {
+  color: var(--primary-clr);
+}
+
+.accent-clr {
+  color: var(--accent-clr);
+}
+
 /* typography */
 
 .ff-serif {

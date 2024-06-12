@@ -9,6 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.[contenthash].js',
         clean: true,
+        assetModuleFilename: 'images/[name].[hash][ext][query]'
     },
     devtool: 'source-map',
     devServer: {
@@ -52,16 +53,12 @@ module.exports = {
                 },
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'fonts/'
-                        }
-                    }
-                ]
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.html$/,
+                use: ["html-loader"]
             }
         ],
     },

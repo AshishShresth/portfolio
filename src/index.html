@@ -5,19 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= htmlWebpackPlugin.options.title %>
+        Ashish Shrestha
     </title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <a class="skip-to-content" href="#main">Skip to content</a>
+    <div class="primary-header content-grid">
+        <div class="primary-header__layout flex breakout">
+            <div class="primary-header__logo ">
+                <a href="/" aria-label="home" class="ff-serif primary-clr fs-600">
+                    <img src="./assets/logo.png" alt="ashish shrestha logo">
+                </a>
+            </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+                <span class="sr-only" aria-expanded="false">Menu</span>
+            </button>
+            <nav>
+                <ul id="primary-navigation" class="primary-header__navigation underline-indicators flex">
+                    <li class="active">
+                        <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
+                                aria-hidden="true">01.</span>About</a>
+                    </li>
+                    <li>
+                        <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
+                                aria-hidden="true">02.</span>Projects</a>
+                    </li>
+                    <li>
+                        <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
+                                aria-hidden="true">03.</span>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="primary-header__theme-switcher">
+                <button class="theme-switcher primary-clr flex" popovertarget="themePopover">
+                    Theme
+                </button>
+                <div id="themePopover" popover>
+                    <ul>
+                        <li class="flex">
+                            <input type="radio" name="color-scheme" id="system" value="system" checked>
+                            <label for="system" class="flex">
+                                System default
+                            </label>
+                        </li>
+                        <li class="flex">
+                            <input type="radio" name="color-scheme" id="light" value="light">
+                            <label for="light" class="flex">
+                                Light theme
+                            </label>
+                        </li>
+                        <li class="flex">
+                            <input type="radio" name="color-scheme" id="dark" value="dark">
+                            <label for="dark" class="flex">
+                                Dark theme
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

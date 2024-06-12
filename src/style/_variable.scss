@@ -7,7 +7,7 @@
   color-scheme: light dark;
   --clr-dark: 230 35% 7%;
   --clr-light-accent: 231 77% 90%;
-  --clr-dark-accent: 231 90% 90%;
+  --clr-dark-accent: 276, 100%, 50%;
   --clr-white: 0 0% 100%;
   --primary-clr: light-dark(hsl(var(--clr-dark)), hsl(var(--clr-light-accent)));
   --primary-bg: light-dark(hsl(var(--clr-white)), hsl(var(--clr-dark)));
@@ -15,6 +15,8 @@
     hsl(var(--clr-dark-accent)),
     hsl(var(--clr-light-accent))
   );
+
+  --border-radius: 4px;
 
   /* font-sizes */
   --fs-900: clamp(5rem, 2.586rem + 7.543vw, 9.375rem);
@@ -30,4 +32,19 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+}
+
+:root {
+  &:has(input[name="color-scheme"][value="system"]:checked) {
+    color-scheme: light dark;
+    --theme-icon: "brightness_medium";
+  }
+  &:has(input[name="color-scheme"][value="light"]:checked) {
+    color-scheme: light;
+    --theme-icon: "light_mode";
+  }
+  &:has(input[name="color-scheme"][value="dark"]:checked) {
+    color-scheme: dark;
+    --theme-icon: "dark_mode";
+  }
 }
