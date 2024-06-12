@@ -22,9 +22,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack App',
+            title: 'Ashish Shrestha',
             filename: 'index.html',
             template: 'src/index.html',
+            favicon: 'src/assets/favicon.ico'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
@@ -50,6 +51,18 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            }
         ],
     },
 }
