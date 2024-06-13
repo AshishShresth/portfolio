@@ -5,10 +5,12 @@
 .primary-header {
   position: sticky;
   top: 0;
+  padding-block: 1rem;
 
   &__layout {
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
   &__logo {
     img {
@@ -41,13 +43,61 @@
       }
     }
 
+    @media (max-width: 35rem) {
+      --underline-gap: 0.5rem;
+      position: fixed;
+      z-index: 1000;
+      inset: 0 0 0 30%;
+      list-style: none;
+      padding: min(20rem, 15vh) 2rem;
+      margin: 0;
+      flex-direction: column;
+      transform: translateX(100%);
+      visibility: hidden;
+      transition: transform 500ms ease-in-out, visibility 500ms ease-in-out;
+
+      &[data-visible="true"] {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      &.underline-indicators > .active {
+        border: 0;
+      }
+    }
     @media (min-width: 35em) {
       padding-inline: clamp(3rem, 7vw, 7rem);
     }
+  }
+}
 
-    @media (min-width: 45em) {
-      margin-block: 1rem;
+@media (max-width: 35rem) {
+  .mobile-nav-toggle {
+    position: absolute;
+    z-index: 2000;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --toggle-icon: "menu";
+
+    &::before {
+      content: var(--toggle-icon);
+      text-rendering: optimizelegibility;
+      overflow-wrap: normal;
+      font: 1.5rem / 1.5rem "Material Icons";
+      text-transform: none;
     }
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    --toggle-icon: "close";
   }
 }
 
@@ -86,6 +136,10 @@
   border-radius: var(--border-radius);
   --gap: 8px;
   align-items: center;
+
+  @media (max-width: 35rem) {
+    margin-inline-end: 35px;
+  }
 
   &::before {
     content: var(--theme-icon);
