@@ -110,6 +110,10 @@
   color: var(--accent-clr);
 }
 
+.highlight-clr {
+  color: hsl(var(--clr-highlight));
+}
+
 /* typography */
 
 .ff-serif {
@@ -161,6 +165,10 @@
   font-size: var(--fs-200);
 }
 
+.fw-bold {
+  font-weight: bold;
+}
+
 .fs-900,
 .fs-800,
 .fs-700,
@@ -171,12 +179,36 @@
 .numbered-title {
   font-family: var(--ff-sans-cond);
   font-size: var(--fs-500);
-  text-transform: uppercase;
   letter-spacing: 4.72px;
+  position: relative;
+  text-wrap: nowrap;
+
+  &.flex {
+    align-items: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 300px;
+    background: light-dark(
+      hsl(var(--clr-dark) / 0.25),
+      hsl(var(--clr-white) / 0.25)
+    );
+  }
 }
 
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
+}
+
+.scroll {
+  width: 30px;
+
+  .circle {
+    fill: hsl(var(--clr-highlight));
+  }
 }

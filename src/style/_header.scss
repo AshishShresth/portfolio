@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   padding-block: 1rem;
+  z-index: 1;
 
   &__layout {
     align-items: center;
@@ -43,7 +44,7 @@
       }
     }
 
-    @media (max-width: 35rem) {
+    @media (max-width: 45rem) {
       --underline-gap: 0.5rem;
       position: fixed;
       z-index: 1000;
@@ -71,7 +72,13 @@
   }
 }
 
-@media (max-width: 35rem) {
+@media (max-width: 45rem) {
+  .primary-header {
+    background: light-dark(
+      hsl(var(--clr-white) / 0.9),
+      hsl(var(--clr-dark) / 0.9)
+    );
+  }
   .mobile-nav-toggle {
     position: absolute;
     z-index: 2000;
@@ -137,7 +144,7 @@
   --gap: 8px;
   align-items: center;
 
-  @media (max-width: 35rem) {
+  @media (max-width: 45rem) {
     margin-inline-end: 35px;
   }
 

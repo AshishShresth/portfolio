@@ -9,6 +9,7 @@
   --clr-light-accent: 231 77% 90%;
   --clr-dark-accent: 276, 100%, 50%;
   --clr-white: 0 0% 100%;
+  --clr-highlight: 276, 100%, 50%;
   --primary-clr: light-dark(hsl(var(--clr-dark)), hsl(var(--clr-light-accent)));
   --primary-bg: light-dark(hsl(var(--clr-white)), hsl(var(--clr-dark)));
   --accent-clr: light-dark(
@@ -17,6 +18,7 @@
   );
 
   --border-radius: 4px;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 
   /* font-sizes */
   --fs-900: clamp(5rem, 2.586rem + 7.543vw, 9.375rem);

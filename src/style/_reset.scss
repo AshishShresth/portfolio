@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 /* Reset margins */
 body,
 h1,
@@ -42,9 +47,6 @@ body {
   background-color: var(--primary-bg);
   line-height: 1.5;
   min-height: 100vh;
-
-  display: grid;
-  grid-template-rows: min-content 1fr;
 
   overflow-x: hidden;
 }

@@ -17,7 +17,7 @@
 
 <body>
     <a class="skip-to-content" href="#main">Skip to content</a>
-    <div class="primary-header content-grid">
+    <header class="primary-header content-grid">
         <div class="primary-header__layout flex breakout">
             <div class="primary-header__logo ">
                 <a href="/" aria-label="home" class="ff-serif primary-clr fs-600">
@@ -31,15 +31,15 @@
                 <ul id="primary-navigation" class="primary-header__navigation underline-indicators flex">
                     <li class="active">
                         <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
-                                aria-hidden="true">01.</span>About</a>
+                                class="highlight-clr" aria-hidden="true">01.</span>About</a>
                     </li>
                     <li>
                         <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
-                                aria-hidden="true">02.</span>Projects</a>
+                                class="highlight-clr" aria-hidden="true">02.</span>Projects</a>
                     </li>
                     <li>
                         <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
-                                aria-hidden="true">03.</span>Contact</a>
+                                class="highlight-clr" aria-hidden="true">03.</span>Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -71,7 +71,97 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
+    <main class="content-grid">
+        <section id="hero" class="hero ">
+            <div class="slide-up-fade-in-animations flow">
+                <h1 class="hero__title flow fs-400 ff-sans-cond uppercase letter-spacing-1">
+                    <span>Hi, my name is</span>
+                    <span class="hero__title--name highlight-clr d-block fs-700 ff-serif fw-bold">Ashish
+                        Shrestha.</span>
+                </h1>
+                <h2 class="d-block fs-700 ff-serif fw-bold primary-clr">I design beautifully simple things.</h2>
+                <div class="hero__desc">
+                    <p>I'm a passionate Front-End Developer with a keen eye for detail and a knack for creating seamless
+                        user
+                        experiences.</p>
+                </div>
+                <div class="hero__scroll highlight-clr">
+                    <div class="flex">
+                        <span>👇</span>
+                        <p>More about me</p>
+                    </div>
+                    <a href="/#about" class="highlight-clr">
+                        <svg class="scroll" xmlns="http://www.w3.org/2000/svg" width="45" height="85"
+                            viewBox="0 0 45 85" style="transform: translate(0px); opacity: 1;">
+                            <g id="scroll" transform="translate(-1204 -2053)">
+                                <g id="Rectangle_11" data-name="Rectangle 11" transform="translate(1204 2053)"
+                                    fill="none" stroke="currentColor" stroke-width="5">
+                                    <rect width="45" height="85" rx="22.5" stroke="none"></rect>
+                                    <rect x="2.5" y="2.5" width="40" height="80" rx="20" fill="none"></rect>
+                                </g>
+                                <circle class="circle" id="scroll-wheel" cx="12.5" cy="12.5" r="12.5"
+                                    transform="translate(1214 2063)"></circle>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about flow">
+            <div class="slide-up-fade-in-animations">
+                <h2 class="numbered-title flex ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
+                        class="highlight-clr" aria-hidden="true">01.</span>About Me
+                </h2>
+            </div>
+            <div class="flex about__content flow">
+                <div class="about__desc">
+                    <div class="slide-up-fade-in-animations flow">
+                        <p>Hello! I'm Ashish Shrestha, a dedicated Front-End Developer with a Bachelor's degree in
+                            Computing from Islington College and extensive experience at Codewing Solutions Pvt. Ltd.
+                        </p>
+                        <p>I have a robust background in developing WordPress themes and plugins, having led projects
+                            like the "Pattern Engine" addon for the "WP Travel Engine Plugin" and the "Pop and Convert"
+                            plugins. My work is driven by a passion for solving complex problems with
+                            elegant and efficient solutions, ensuring that each project is optimized, accessible, and
+                            visually appealing.</p>
+                        <p>Here are a few technologies I’ve been working with recently:</p>
+                        <ul class="about__skill-list">
+                            <li>
+                                JavaScript (ES6+)
+                            </li>
+                            <li>
+                                React
+                            </li>
+                            <li>
+                                WordPress
+                            </li>
+                            <li>
+                                Webpack
+                            </li>
+                            <li>
+                                HTML5
+                            </li>
+                            <li>
+                                CSS3
+                            </li>
+                            <li>
+                                Tailwind CSS
+                            </li>
+                            <li>
+                                Sass
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about__pic">
+                    <div class="slide-right-fade-in-animations about__pic__wrapper">
+                        <img class="about__pic__img" src="./assets/ashish-shrestha-profile-pic.jpg" alt="headshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

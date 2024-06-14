@@ -1,0 +1,73 @@
+.hero {
+  padding-block: max(3rem, 10vh);
+  &__title {
+    line-height: 1.75;
+  }
+
+  &__desc {
+    --flow-space: 1.75rem;
+  }
+
+  &__scroll {
+    --flow-space: 1.75rem;
+
+    .flex {
+      --gap: 0.5rem;
+    }
+  }
+}
+
+.about {
+  --flow-space: 1.75rem;
+  padding-block: max(3rem, 10vh);
+
+  &__content {
+    @media (max-width: 35rem) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+
+    li::marker {
+      content: "▹";
+      color: hsl(var(--clr-highlight));
+    }
+  }
+
+  &__desc {
+    @media (max-width: 35rem) {
+      order: 2;
+    }
+  }
+
+  &__pic {
+    height: 100%;
+    display: block;
+
+    &__img {
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px -20px var(--primary-clr);
+      @media (min-width: 35rem) {
+        mix-blend-mode: multiply;
+        filter: grayscale(100%);
+        transform: translate(0);
+        transition: filter 250ms var(--easing),
+          mix-blend-mode 250ms var(--easing), transform 250ms var(--easing);
+
+        &:hover {
+          transform: translate(-4px, -4px);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .about__pic__img {
+      filter: none;
+      mix-blend-mode: normal;
+    }
+  }
+}
