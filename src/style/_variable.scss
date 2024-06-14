@@ -25,7 +25,7 @@
   --fs-800: clamp(3.5rem, 1.983rem + 4.741vw, 5rem);
   --fs-700: clamp(3rem, 0.397rem + 3.448vw, 3.5rem);
   --fs-600: clamp(2.5rem, 0.448rem + 1.724vw, 3rem);
-  --fs-500: clamp(1rem, 0.586rem + 1.293vw, 1.75rem);
+  --fs-500: clamp(1.5rem, 0.586rem + 1.293vw, 1.75rem);
   --fs-400: clamp(0.938rem, 0.834rem + 0.323vw, 1.125rem);
   --fs-300: 1rem;
   --fs-200: 0.875rem;
@@ -37,6 +37,8 @@
 
   /* spacing */
   --space-lg: clamp(2.5rem, -0.179rem + 7.143vw, 6.25rem);
+  --space-md: 2.5rem;
+  --space-sm: 1.25rem;
 }
 
 :root {

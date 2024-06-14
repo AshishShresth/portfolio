@@ -1,6 +1,7 @@
 import './style/main.scss';
 import navigationToggle from './js/navigationToggle';
 import scrollTrigger from './js/animation';
+import accordion from './js/accordion';
 
 function isDOMReady(fn) {
     if (typeof fn !== 'function') return;
@@ -19,4 +20,5 @@ isDOMReady(function () {
     scrollTrigger(animationClasses, {
         rootMargin: "0px"
     });
+    accordion();
 })

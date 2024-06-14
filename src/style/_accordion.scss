@@ -1,0 +1,97 @@
+.accordion {
+  --panel-height: clamp(25rem, 18.75rem + 16.667vw, 33.75rem);
+  --panel-width: 36.25rem;
+  --panel-inactive-width: 5rem;
+  display: flex;
+  row-gap: var(--space-sm);
+  column-gap: var(--space-sm);
+  flex-direction: column;
+
+  @media (min-width: 45rem) {
+    flex-direction: row;
+    height: var(--panel-height);
+  }
+
+  &__fig {
+    &__link {
+      text-decoration: none;
+    }
+    img {
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &__content {
+    transform: translateY(2rem);
+    opacity: 0;
+    visibility: hidden;
+    max-height: var(--panel-height);
+    overflow-y: scroll;
+    padding: 1.5rem;
+    --flow-space: 1.5rem;
+  }
+
+  &__panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: flex-basis 400ms, flex-grow 400ms;
+    flex-basis: var(--panel-inactive-width);
+    background: light-dark(
+      hsl(var(--clr-dark) / 0.05),
+      hsl(var(--clr-white) / 0.05)
+    );
+    border-radius: var(--border-radius);
+
+    &:has([aria-expanded="true"]) {
+      flex-basis: var(--panel-width);
+      flex-grow: 1;
+
+      @media (max-width: 45rem) {
+        flex-basis: var(--panel-height);
+      }
+
+      .accordion__content {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transition: transform 400ms 400ms, opacity 400ms 400ms;
+      }
+    }
+  }
+
+  &__trigger {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+    appearance: none;
+    border: none;
+    background: transparent;
+
+    &[aria-expanded="false"] {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (min-width: 45rem) {
+      left: 50%;
+      text-orientation: mixed;
+      top: 24px;
+      transform: translateX(-50%) translateY(0);
+      writing-mode: vertical-rl;
+    }
+
+    @media (max-width: 45rem) {
+      height: 100%;
+      padding: 12px 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+  }
+}

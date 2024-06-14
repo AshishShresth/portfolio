@@ -29,12 +29,12 @@
             </button>
             <nav>
                 <ul id="primary-navigation" class="primary-header__navigation underline-indicators flex">
-                    <li class="active">
+                    <li>
                         <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
                                 class="highlight-clr" aria-hidden="true">01.</span>About</a>
                     </li>
                     <li>
-                        <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#about"><span
+                        <a class="ff-sans-cond uppercase primary-clr letter-spacing-2" href="#project"><span
                                 class="highlight-clr" aria-hidden="true">02.</span>Projects</a>
                     </li>
                     <li>
@@ -75,8 +75,8 @@
     <main class="content-grid">
         <section id="hero" class="hero ">
             <div class="slide-up-fade-in-animations flow">
-                <h1 class="hero__title flow fs-400 ff-sans-cond letter-spacing-1">
-                    <span class="highlight-clr">Hi, my name is</span>
+                <h1 class="hero__title flow letter-spacing-1">
+                    <span class="highlight-clr ff-sans-cond fs-400">Hi, my name is</span>
                     <span class="hero__title--name d-block fs-700 ff-sans-normal">Ashish
                         Shrestha.</span>
                 </h1>
@@ -91,8 +91,8 @@
                         <span>👇</span>
                         <p>More about me</p>
                     </div>
-                    <a href="/#about" class="highlight-clr">
-                        <svg class="scroll" xmlns="http://www.w3.org/2000/svg" width="45" height="85"
+                    <a href="/#about" class="highlight-clr scroll">
+                        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" width="45" height="85"
                             viewBox="0 0 45 85" style="transform: translate(0px); opacity: 1;">
                             <g id="scroll" transform="translate(-1204 -2053)">
                                 <g id="Rectangle_11" data-name="Rectangle 11" transform="translate(1204 2053)"
@@ -126,7 +126,7 @@
                             elegant and efficient solutions, ensuring that each project is optimized, accessible, and
                             visually appealing.</p>
                         <p>Here are a few technologies I’ve been working with recently:</p>
-                        <ul class="about__skill-list">
+                        <ul class="about__skill-list tech-stack">
                             <li>
                                 JavaScript (ES6+)
                             </li>
@@ -149,17 +149,166 @@
                                 Tailwind CSS
                             </li>
                             <li>
-                                Sass
+                                SCSS
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="about__pic">
                     <div class="slide-right-fade-in-animations about__pic__wrapper">
-                        <img class="about__pic__img" src="./assets/ashish-shrestha-profile-pic.jpg" alt="headshot">
+                        <img class="about__pic__img grayscale-img" src="./assets/ashish-shrestha-profile-pic.jpg"
+                            alt="headshot">
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="project" class="project flow">
+            <div class="slide-up-fade-in-animations">
+                <h2 class="numbered-title flex primary-clr" href="#about"><span class="highlight-clr"
+                        aria-hidden="true">01.</span>Projects I've Worked On
+                </h2>
+            </div>
+            <div class="slide-up-fade-in-animations">
+                <div class="project__featured accordion">
+                    <div class="accordion__panel">
+                        <div id="ac0-content" class="accordion__content flow" aria-hidden="false" role="region">
+                            <div class="accordion__fig">
+                                <a href="https://popandconvert.com/" target="_blank" rel="noopener noreferrer"
+                                    class="accordion__fig__link">
+                                    <img src="./assets/pop-and-convert-2.png" alt="pop and convert"
+                                        class="grayscale-img">
+                                </a>
+                            </div>
+                            <div class="accordion__desc">
+                                <div class="flow flow--space-small">
+                                    <span class="highlight-clr ff-sans-cond fs-400">Featured Project</span>
+                                    <h3 class="project__title">
+                                        <a href="https://popandconvert.com/" target="_blank" rel="noopener noreferrer"
+                                            class="fs-500 ff-serif primary-clr">Pop
+                                            and Convert<span class="material-symbols-outlined">
+                                                arrow_outward
+                                            </span></a>
+                                    </h3>
+                                    <div class="project__desc flow flow--space-small">
+                                        <p>Pop and Convert is a pop-up and notification WordPress plugin for bloggers,
+                                            marketers, and business owners. This plugin enhances website engagement
+                                            through
+                                            customizable notifications, helping you guide visitors and generate leads.
+                                        </p>
+                                        <p>You can customize colors and fonts and choose from various layouts to ensure
+                                            your
+                                            notifications resonate perfectly with your brand’s identity. Additionally,
+                                            you
+                                            can choose from sticky pop-ups to center-stage pop-ups and decide how and
+                                            where
+                                            your notifications appear on your website.</p>
+                                    </div>
+                                    <ul class="project__tech-list flex">
+                                        <li>WordPress</li>
+                                        <li>React</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="ac0-button" class="accordion__trigger flex" aria-expanded="true"
+                            aria-controls="ac0-content">
+                            Pop and Convert
+                        </button>
+                    </div>
+                    <div class="accordion__panel">
+                        <div id="ac0-content" class="accordion__content flow" aria-hidden="true" role="region">
+                            <div class="accordion__fig">
+                                <a href="https://demo.wpdelicious.com/widgets-blocks-demo/recipe-accordion-1/"
+                                    target="_blank" rel="noopener noreferrer" class="accordion__fig__link">
+                                    <img src="./assets/WP-delicious-widgets.png" alt="wp delicious widgets"
+                                        class="grayscale-img">
+                                </a>
+                            </div>
+                            <div class="accordion__desc">
+                                <div class="flow flow--space-small">
+                                    <span class="highlight-clr ff-sans-cond fs-400">Featured Project</span>
+                                    <h3 class="project__title">
+                                        <a href="https://demo.wpdelicious.com/widgets-blocks-demo/recipe-accordion-1/"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="fs-500 ff-serif primary-clr">Delicious Recipes Widgets and
+                                            Blocks<span class="material-symbols-outlined">
+                                                arrow_outward
+                                            </span></a>
+                                    </h3>
+                                    <div class="project__desc flow flow--space-small">
+                                        <p>Built-in Elementor and Gutenberg elements aren’t enough to make a great
+                                            recipe blog. You need an extra set of blocks and widgets that are
+                                            specifically designed for recipes. That’s where Delicious Recipes Widgets
+                                            and Blocks comes in.
+                                        </p>
+                                        <p>It comes with a library of pre-designed layouts, so all you have to do is add
+                                            your recipe and let the plugin do the rest.</p>
+                                    </div>
+                                    <ul class="project__tech-list flex">
+                                        <li>WordPress</li>
+                                        <li>JavaScript</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                        <li>Elementor</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="ac0-button" class="accordion__trigger flex" aria-expanded="false"
+                            aria-controls="ac0-content">
+                            Delicious Recipes Widgets and Blocks
+                        </button>
+                    </div>
+                    <div class="accordion__panel">
+                        <div id="ac0-content" class="accordion__content flow" aria-hidden="true" role="region">
+                            <div class="accordion__fig">
+                                <a href="https://wptravelengine.com/pattern-engine/" target="_blank"
+                                    rel="noopener noreferrer" class="accordion__fig__link">
+                                    <img src="./assets/pattern-engine.png" alt="pattern engine" class="grayscale-img">
+                                </a>
+                            </div>
+                            <div class="accordion__desc">
+                                <div class="flow flow--space-small">
+                                    <span class="highlight-clr ff-sans-cond fs-400">Featured Project</span>
+                                    <h3 class="project__title">
+                                        <a href="https://wptravelengine.com/pattern-engine/" target="_blank"
+                                            rel="noopener noreferrer" class="fs-500 ff-serif primary-clr">Pattern
+                                            Engine<span class="material-symbols-outlined">
+                                                arrow_outward
+                                            </span></a>
+                                    </h3>
+                                    <div class="project__desc flow flow--space-small">
+                                        <p>Pattern Engine is your ultimate solution for crafting stunning and
+                                            professional websites tailored specifically for travel and tour agencies.
+                                            With just a click, import pre-designed patterns curated to perfection,
+                                            saving you time and effort while ensuring a visually captivating online
+                                            presence.
+                                        </p>
+                                        <p>Whether you’re a seasoned developer or a novice user, Pattern Engine
+                                            streamlines the website creation process, offering a seamless experience
+                                            from start to finish.</p>
+                                        <p>
+                                            Transform your online presence today with Pattern Engine – where innovation
+                                            meets simplicity, and excellence knows no bounds.
+                                        </p>
+                                    </div>
+                                    <ul class="project__tech-list flex">
+                                        <li>WordPress</li>
+                                        <li>React</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="ac0-button" class="accordion__trigger flex" aria-expanded="false"
+                            aria-controls="ac0-content">
+                            Pattern Engine
+                        </button>
+                    </div>
+                </div>
         </section>
     </main>
 </body>
