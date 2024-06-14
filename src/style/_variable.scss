@@ -22,9 +22,9 @@
 
   /* font-sizes */
   --fs-900: clamp(5rem, 2.586rem + 7.543vw, 9.375rem);
-  --fs-800: clamp(3.5rem, 1.983rem + 4.741vw, 6.25rem);
-  --fs-700: clamp(1.5rem, 0.397rem + 3.448vw, 3.5rem);
-  --fs-600: clamp(1rem, 0.448rem + 1.724vw, 2rem);
+  --fs-800: clamp(3.5rem, 1.983rem + 4.741vw, 5rem);
+  --fs-700: clamp(3rem, 0.397rem + 3.448vw, 3.5rem);
+  --fs-600: clamp(2.5rem, 0.448rem + 1.724vw, 3rem);
   --fs-500: clamp(1rem, 0.586rem + 1.293vw, 1.75rem);
   --fs-400: clamp(0.938rem, 0.834rem + 0.323vw, 1.125rem);
   --fs-300: 1rem;
@@ -34,6 +34,9 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+
+  /* spacing */
+  --space-lg: clamp(2.5rem, -0.179rem + 7.143vw, 6.25rem);
 }
 
 :root {

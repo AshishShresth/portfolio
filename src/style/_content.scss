@@ -1,11 +1,19 @@
 .hero {
-  padding-block: max(3rem, 10vh);
+  height: calc(100dvh - 90px);
+  align-content: center;
+
   &__title {
     line-height: 1.75;
+
+    &--name {
+      font-weight: 700;
+      color: light-dark(hsl(var(--clr-dark)), hsl(var(--clr-white)));
+    }
   }
 
   &__desc {
     --flow-space: 1.75rem;
+    max-width: 32rem;
   }
 
   &__scroll {
@@ -18,18 +26,19 @@
 }
 
 .about {
-  --flow-space: 1.75rem;
-  padding-block: max(3rem, 10vh);
+  padding-block-end: var(--space-lg);
+  --flow-space: 2.5rem;
 
   &__content {
-    @media (max-width: 35rem) {
-      flex-wrap: wrap;
-    }
+    grid-template-columns: 3fr 2fr;
+    --gap: 2rem;
   }
 
   &__skill-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
+    padding: 0;
+    list-style-position: inside;
 
     li::marker {
       content: "▹";
@@ -38,6 +47,7 @@
   }
 
   &__desc {
+    --flow-space: 1rem;
     @media (max-width: 35rem) {
       order: 2;
     }
@@ -50,6 +60,11 @@
     &__img {
       border-radius: var(--border-radius);
       box-shadow: 0 10px 30px -20px var(--primary-clr);
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+
       @media (min-width: 35rem) {
         mix-blend-mode: multiply;
         filter: grayscale(100%);

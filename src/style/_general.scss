@@ -165,10 +165,6 @@
   font-size: var(--fs-200);
 }
 
-.fw-bold {
-  font-weight: bold;
-}
-
 .fs-900,
 .fs-800,
 .fs-700,
@@ -182,6 +178,7 @@
   letter-spacing: 4.72px;
   position: relative;
   text-wrap: nowrap;
+  text-transform: uppercase;
 
   &.flex {
     align-items: center;
