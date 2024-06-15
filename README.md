@@ -1,7 +1,7 @@
 <div align="center">
-<h1 align="center">
-  ashishshresth.github.io/portfolio/
-</h1>
+  <h2>
+    <a href="https://ashishshresth.github.io/portfolio/" target="_blank">ashishshresth.github.io/portfolio</a>
+  </h2>
 </div>
 
 ## 🛠 Installation & Set Up
