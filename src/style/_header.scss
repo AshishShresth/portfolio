@@ -122,6 +122,10 @@
   background: transparent;
 }
 
+.underline-indicators a {
+  padding: var(--underline-gap, 0.5rem) 0;
+}
+
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
   border-color: light-dark(
