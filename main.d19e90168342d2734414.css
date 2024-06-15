@@ -471,6 +471,19 @@ body::before {
     transform: translate(-60px, -60px);
   }
 }
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+  from {
+    transform: translate(1214px, 2063px);
+    z-index: 5;
+  }
+  to {
+    transform: translate(1214px, 2103px);
+  }
+}
 .mobile-nav-toggle {
   display: none;
 }
@@ -951,4 +964,4 @@ body::before {
   }
 }
 
-/*# sourceMappingURL=main.6c84527d8c7968cf1a36.css.map*/
+/*# sourceMappingURL=main.d19e90168342d2734414.css.map*/
